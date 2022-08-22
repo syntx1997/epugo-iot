@@ -12,22 +12,23 @@ $(document).on('click', '#logout-btn', function (){
     Swal.fire({
         title: 'Log Out?',
         text: "You can get back again next time.",
-        icon: 'warning',
+        type: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
         confirmButtonText: 'Yes'
     }).then((result) => {
-        if (result.isConfirmed) {
+        console.log(result);
+        if (result.value) {
             $.ajax({
                 url: '/func/auth/logout',
                 type: 'GET',
                 success: function (response){
-                    Swal.fire(
-                        'Logged Out',
-                        response.message,
-                        'success'
-                    )
+                    Swal.fire({
+                        title: 'Logged Out!',
+                        text: response.message,
+                        type: 'success'
+                    })
                     setInterval(function (){
                         location.reload();
                     }, 2000);

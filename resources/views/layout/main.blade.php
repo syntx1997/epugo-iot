@@ -22,6 +22,8 @@
 
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
+    <link href="{{ asset('vendor/sweetalert2/dist/sweetalert2.min.css') }}" rel="stylesheet">
+
 </head>
 <body>
 
@@ -54,6 +56,11 @@
 <script src="{{ asset('js/custom.min.js') }}"></script>
 <script src="{{ asset('js/dlabnav-init.js') }}"></script>
 <script src="{{ asset('js/styleSwitcher.js') }}"></script>
+
+<script src="{{ asset('vendor/sweetalert2/dist/sweetalert2.min.js') }}"></script>
+
+<script src="{{ asset('/js/global.js?v' . \Illuminate\Support\Str::random(8)) }}"></script>
+<script src="{{ $js ?? '' }}"></script>
 
 </body>
 </html>
