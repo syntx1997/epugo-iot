@@ -12,8 +12,8 @@
                     <span class="nav-text">Room Mgt.</span>
                 </a>
                 <ul aria-expanded="false">
-                    <li><a href="/dashboard/rooms">Rooms</a></li>
-                    <li><a href="/dashboard/quails">Quails</a></li>
+                    <li><a href="/dashboard/room">Rooms</a></li>
+                    <li><a href="/dashboard/quail">Quails</a></li>
                 </ul>
             </li>
             <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
@@ -21,8 +21,8 @@
                     <span class="nav-text">Eggs</span>
                 </a>
                 <ul aria-expanded="false">
-                    <li><a href="/dashboard/count-eggs">Count Eggs</a></li>
-                    <li><a href="/dashboard/collect-eggs">Collect Eggs</a></li>
+                    <li><a href="/dashboard/count-egg">Count Egg</a></li>
+                    <li><a href="/dashboard/collect-egg">Collect Egg</a></li>
                 </ul>
             </li>
             <li>

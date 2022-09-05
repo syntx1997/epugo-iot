@@ -13,4 +13,18 @@ class DashboardController extends Controller
 
         return view('admin.index', $data);
     }
+
+    public function room() {
+        return view('admin.room', [
+            'title' => 'Room',
+            'js' => asset('js/dashboard/room.js')
+        ]);
+    }
+
+    public function quail() {
+        return view('admin.quail', [
+            'title' => 'Quail',
+            'js' => asset('js/dashboard/quail.js')
+        ]);
+    }
 }

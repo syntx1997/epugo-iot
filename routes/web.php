@@ -4,15 +4,30 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\RoomController;
 
 Route::get('/', [DashboardController::class, 'index'])
     ->middleware('auth');
 Route::get('/login', [AuthController::class, 'login'])
     ->middleware('guest')->name('login');
 
+Route::prefix('/dashboard')->middleware('auth')->group(function () {
+    Route::get('/room', [DashboardController::class, 'room']);
+    Route::get('/quail', [DashboardController::class, 'quail']);
+});
+
 Route::prefix('/func')->group(function () {
+
     Route::prefix('/auth')->group(function (){
         Route::post('/login', [UserController::class, 'login']);
         Route::get('/logout', [UserController::class, 'logout']);
     });
+
+    Route::prefix('room')->group(function () {
+        Route::get('get-all', [RoomController::class, 'get_all']);
+        Route::get('generate-room-no', [RoomController::class, 'generate_room_no']);
+        Route::post('add', [RoomController::class, 'add']);
+        Route::post('edit', [RoomController::class, 'edit']);
+    });
+
 });

@@ -20,6 +20,9 @@
     <link href="{{ asset('vendor/owl-carousel/owl.carousel.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('vendor/nouislider/nouislider.min.css') }}">
 
+    <!-- Datatable -->
+    <link href="{{ asset('vendor/datatables/css/jquery.dataTables.min.css') }}" rel="stylesheet">
+
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
     <link href="{{ asset('vendor/sweetalert2/dist/sweetalert2.min.css') }}" rel="stylesheet">
@@ -58,6 +61,9 @@
 <script src="{{ asset('js/styleSwitcher.js') }}"></script>
 
 <script src="{{ asset('vendor/sweetalert2/dist/sweetalert2.min.js') }}"></script>
+
+<!-- Datatable -->
+<script src="{{ asset('vendor/datatables/js/jquery.dataTables.min.js') }}"></script>
 
 <script src="{{ asset('/js/global.js?v' . \Illuminate\Support\Str::random(8)) }}"></script>
 <script src="{{ $js ?? '' }}"></script>
