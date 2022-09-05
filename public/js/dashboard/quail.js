@@ -1,6 +1,10 @@
 const quailTable = $('#quail-table');
 const api = '/func/quail/';
 
+const addQuailForm = $('#add-quail-form');
+const addQuailSubmitBtn = addQuailForm.find('button[type="submit"]');
+const addQuailModal = $('#add-quail-modal');
+
 $(function () {
     const quailDataTable = quailTable.DataTable({
         'ajax': api + 'get-all',
@@ -38,4 +42,13 @@ $(function () {
             }
         }
     });
+});
+
+$(document).on('click', '#addQuailBtn', function () {
+    const data = $(this).data();
+
+    addQuailForm.find('input[name="room_no"]').val(data.room_no);
+    addQuailForm.find('input[name="current_stock"]').val(data.quantity);
+
+    showModal(addQuailModal);
 });

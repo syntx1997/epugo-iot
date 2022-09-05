@@ -34,50 +34,33 @@
         </div>
     </div>
 
-    <div id="add-room-modal" class="modal fade" tabindex="-1">
+    <div id="add-quail-modal" class="modal fade" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
-            <form id="add-room-form" class="modal-content">
+            <form id="add-quail-form" class="modal-content">
                 @csrf
                 <div class="modal-header">
                     <h5 class="modal-title">
-                        <i class="fa fa-plus"></i> Add Room
+                        <i class="fa fa-plus"></i> Add Quail
                     </h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="form-group">
+                    <div class="form-group mb-2">
                         <label>Room No.</label>
                         <input type="text" name="room_no" class="form-control" readonly>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label>Current Stock</label>
+                        <input type="text" name="current_stock" class="form-control" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>Quantity.</label>
+                        <input type="number" name="quantity" class="form-control">
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger light" data-bs-dismiss="modal">Close</button>
                     <button type="submit" class="btn btn-primary">Add</button>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <div id="edit-room-modal" class="modal fade" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-            <form id="edit-room-form" class="modal-content">
-                @csrf
-                <div class="modal-header">
-                    <h5 class="modal-title">
-                        <i class="fa fa-edit"></i> Edit Room
-                    </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="form-group">
-                        <label>Room No.</label>
-                        <input type="text" name="room_no" class="form-control">
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <input type="hidden" name="id">
-                    <button type="button" class="btn btn-danger light" data-bs-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Edit</button>
                 </div>
             </form>
         </div>
