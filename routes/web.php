@@ -5,6 +5,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\RoomController;
+use App\Http\Controllers\QuailController;
 
 Route::get('/', [DashboardController::class, 'index'])
     ->middleware('auth');
@@ -28,6 +29,10 @@ Route::prefix('/func')->group(function () {
         Route::get('generate-room-no', [RoomController::class, 'generate_room_no']);
         Route::post('add', [RoomController::class, 'add']);
         Route::post('edit', [RoomController::class, 'edit']);
+    });
+
+    Route::prefix('/quail')->group(function () {
+        Route::get('/get-all', [QuailController::class, 'get_all']);
     });
 
 });

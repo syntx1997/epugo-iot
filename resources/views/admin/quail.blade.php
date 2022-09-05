@@ -17,7 +17,7 @@
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table id="room-table" class="display" style="width: 100%">
+                        <table id="quail-table" class="display" style="width: 100%">
                             <thead>
                             <tr>
                                 <td class="text-center">ID#</td>
