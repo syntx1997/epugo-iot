@@ -19,8 +19,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/temperature/{temperature}/{lightStatus}', function () {
-    return response([
-        'temperature'
-    ]);
-});
+Route::get('/temperature/{temperature}/{lightStatus}', [APIController::class, 'temperature']);
+Route::get('/sound/{decibel}/{musicStatus}', [APIController::class, 'sound']);
