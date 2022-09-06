@@ -17,6 +17,7 @@ Route::prefix('/dashboard')->middleware('auth')->group(function () {
     Route::get('/room', [DashboardController::class, 'room']);
     Route::get('/quail', [DashboardController::class, 'quail']);
     Route::get('/count-egg', [DashboardController::class, 'count_egg']);
+    Route::get('/collect-egg', [DashboardController::class, 'collect_egg']);
 });
 
 Route::prefix('/func')->group(function () {

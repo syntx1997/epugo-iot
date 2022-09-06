@@ -7,10 +7,10 @@
     <meta name="author" content="">
     <meta name="robots" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Fillow : Fillow Saas Admin  Bootstrap 5 Template">
-    <meta property="og:title" content="Fillow : Fillow Saas Admin  Bootstrap 5 Template">
-    <meta property="og:description" content="Fillow : Fillow Saas Admin  Bootstrap 5 Template">
-    <meta property="og:image" content="https:/fillow.dexignlab.com/xhtml/social-image.png">
+    <meta name="description" content="e-Pugo: IoT-Based Quail Management System">
+    <meta property="og:title" content="e-Pugo: IoT-Based Quail Management System">
+    <meta property="og:description" content="e-Pugo: IoT-Based Quail Management System">
+    <meta property="og:image" content="{{ asset('images/quail.png') }}">
     <meta name="format-detection" content="telephone=no">
 
     <title>{{ $title ?? env('APP_NAME') }}</title>
