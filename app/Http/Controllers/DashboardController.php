@@ -41,4 +41,11 @@ class DashboardController extends Controller
             'js' => asset('js/dashboard/collect-egg.js')
         ]);
     }
+
+    public function api() {
+        return view('admin.api', [
+            'title' => 'API',
+            'js' => asset('js/dashboard/api.js')
+        ]);
+    }
 }

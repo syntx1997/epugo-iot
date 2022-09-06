@@ -26,21 +26,27 @@
                 </ul>
             </li>
             <li>
-                <a href="/dashboard/index" class="" aria-expanded="false">
+                <a href="/dashboard/temperature" class="" aria-expanded="false">
                     <i class="fas fa-thermometer-empty"></i>
                     <span class="nav-text">Temperature</span>
                 </a>
             </li>
             <li>
-                <a href="/dashboard/index" class="" aria-expanded="false">
+                <a href="/dashboard/sound" class="" aria-expanded="false">
                     <i class="fas fa-wifi"></i>
                     <span class="nav-text">Sound</span>
                 </a>
             </li>
             <li>
-                <a href="/dashboard/index" class="" aria-expanded="false">
+                <a href="/dashboard/Summary" class="" aria-expanded="false">
                     <i class="fas fa-chart-area"></i>
                     <span class="nav-text">Summary</span>
+                </a>
+            </li>
+            <li>
+                <a href="/dashboard/api" class="" aria-expanded="false">
+                    <i class="fas fa-database"></i>
+                    <span class="nav-text">API</span>
                 </a>
             </li>
         </ul>
