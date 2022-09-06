@@ -1,5 +1,5 @@
 <div class="nav-header">
-    <a href="index.html" class="brand-logo">
+    <a href="/" class="brand-logo">
         <img src="{{ asset('images/quail.png') }}" style="width: 50px">
         <div class="brand-title">
             <h2 class="">E-PUGO</h2>

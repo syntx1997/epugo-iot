@@ -27,4 +27,11 @@ class DashboardController extends Controller
             'js' => asset('js/dashboard/quail.js')
         ]);
     }
+
+    public function count_egg() {
+        return view('admin.count-egg', [
+            'title' => 'Count Egg',
+            'js' => asset('js/dashboard/count-egg.js')
+        ]);
+    }
 }

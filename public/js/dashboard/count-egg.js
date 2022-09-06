@@ -1,12 +1,13 @@
-const quailTable = $('#quail-table');
-const api = '/func/quail/';
+const eggTable = $('#egg-table');
+const api = '/func/egg/';
 
-const addQuailForm = $('#add-quail-form');
-const addQuailSubmitBtn = addQuailForm.find('button[type="submit"]');
-const addQuailModal = $('#add-quail-modal');
+const setTotalEggForm = $('#set-total-egg-form');
+const setTotalEggSubmitBtn = setTotalEggForm.find('button[type="submit"]');
+const setTotalEggModal = $('#set-total-egg-modal');
 
 $(function () {
-    const quailDataTable = quailTable.DataTable({
+
+    const eggDataTable = eggTable.DataTable({
         'ajax': api + 'get-all',
         'columns': [
             {
@@ -22,7 +23,7 @@ $(function () {
             {
                 'className': 'text-center',
                 'orderable': false,
-                'data': 'quantity'
+                'data': 'total'
             },
             {
                 'className': 'text-center',
@@ -43,17 +44,17 @@ $(function () {
         }
     });
 
-    addQuailForm.on('submit', function (e) {
+    setTotalEggForm.on('submit', function (e) {
         e.preventDefault();
         $.ajax({
-            url: api + 'add',
+            url: api + 'set',
             type: 'POST',
-            data: addQuailForm.serialize(),
+            data: setTotalEggForm.serialize(),
             dataType: 'JSON',
             success: function (res) {
-                resetForm(addQuailForm);
-                reloadDataTable(quailTable);
-                hideModal(addQuailModal);
+                resetForm(setTotalEggForm);
+                hideModal(setTotalEggModal);
+                reloadDataTable(eggTable);
             },
             error: function (err) {
                 const errJSON = err.responseJSON;
@@ -63,28 +64,29 @@ $(function () {
                     const errors = errJSON.errors;
 
                     $.each(errors, function (field, message) {
-                        const input = formInput(addQuailForm, 'input', field);
+                        const input = formInput(setTotalEggForm, 'input', field);
                         Validation.validate(input, message);
                     });
                 }
             },
             beforeSend: function () {
                 removeInputValidationErrors();
-                submitBtnBeforeSend(addQuailSubmitBtn, 'Adding');
+                submitBtnBeforeSend(setTotalEggSubmitBtn, 'Setting');
             },
             complete: function () {
-                submitBtnAfterSend(addQuailSubmitBtn, 'Add')
+                submitBtnAfterSend(setTotalEggSubmitBtn, 'Set');
             }
         });
     });
+
 });
 
-$(document).on('click', '#addQuailBtn', function () {
+$(document).on('click', '#setTotalEggBtn', function () {
     const data = $(this).data();
 
-    addQuailForm.find('input[name="room_no"]').val(data.room_no);
-    addQuailForm.find('input[name="current_stock"]').val(data.quantity);
-    addQuailForm.find('input[name="id"]').val(data.id);
+    setTotalEggForm.find('input[name="room_no"]').val(data.room_no);
+    setTotalEggForm.find('input[name="current_total"]').val(data.total);
+    setTotalEggForm.find('input[name="id"]').val(data.id);
 
-    showModal(addQuailModal);
+    showModal(setTotalEggModal);
 });

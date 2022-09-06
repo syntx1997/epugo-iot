@@ -6,6 +6,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\RoomController;
 use App\Http\Controllers\QuailController;
+use App\Http\Controllers\EggController;
 
 Route::get('/', [DashboardController::class, 'index'])
     ->middleware('auth');
@@ -15,6 +16,7 @@ Route::get('/login', [AuthController::class, 'login'])
 Route::prefix('/dashboard')->middleware('auth')->group(function () {
     Route::get('/room', [DashboardController::class, 'room']);
     Route::get('/quail', [DashboardController::class, 'quail']);
+    Route::get('/count-egg', [DashboardController::class, 'count_egg']);
 });
 
 Route::prefix('/func')->group(function () {
@@ -33,6 +35,12 @@ Route::prefix('/func')->group(function () {
 
     Route::prefix('/quail')->group(function () {
         Route::get('/get-all', [QuailController::class, 'get_all']);
+        Route::post('/add', [QuailController::class, 'add']);
+    });
+
+    Route::prefix('/egg')->group(function () {
+        Route::get('/get-all', [EggController::class, 'get_all']);
+        Route::post('/set', [EggController::class, 'set']);
     });
 
 });
