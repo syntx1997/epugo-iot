@@ -38,7 +38,7 @@
                 </a>
             </li>
             <li>
-                <a href="/dashboard/Summary" class="" aria-expanded="false">
+                <a href="/dashboard/summary" class="" aria-expanded="false">
                     <i class="fas fa-chart-area"></i>
                     <span class="nav-text">Summary</span>
                 </a>

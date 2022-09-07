@@ -19,6 +19,9 @@ Route::prefix('/dashboard')->middleware('auth')->group(function () {
     Route::get('/count-egg', [DashboardController::class, 'count_egg']);
     Route::get('/collect-egg', [DashboardController::class, 'collect_egg']);
     Route::get('/api', [DashboardController::class, 'api']);
+    Route::get('/temperature', [DashboardController::class, 'temperature']);
+    Route::get('/sound', [DashboardController::class, 'sound']);
+    Route::get('/summary', [DashboardController::class, 'summary']);
 });
 
 Route::prefix('/func')->group(function () {

@@ -48,4 +48,25 @@ class DashboardController extends Controller
             'js' => asset('js/dashboard/api.js')
         ]);
     }
+
+    public function temperature() {
+        return view('admin.temperature', [
+            'title' => 'Temperature',
+            'js' => asset('js/dashboard/temperature.js')
+        ]);
+    }
+
+    public function sound() {
+        return view('admin.sound', [
+            'title' => 'Sound',
+            'js' => asset('js/dashboard/sound.js')
+        ]);
+    }
+
+    public function summary() {
+        return view('admin.summary', [
+            'title' => 'Summary',
+            'js' => asset('js/dashboard/summary.js')
+        ]);
+    }
 }
