@@ -8,4 +8,29 @@
         </ol>
     </div>
 
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">{{ $title }}</h5>
+                </div>
+                <div class="card-body">
+
+                    <div class="table-responsive">
+                        <table id="sound-table" class="display" style="width: 100%">
+                            <thead>
+                            <tr>
+                                <td class="text-center">Date & Time</td>
+                                <td class="text-center">Temperature</td>
+                                <td class="text-center">Sound/Music Status</td>
+                            </tr>
+                            </thead>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
 @endsection
