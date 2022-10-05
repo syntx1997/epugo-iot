@@ -7,22 +7,22 @@
                     <span class="nav-text">Dashboard</span>
                 </a>
             </li>
-            <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
-                    <i class="fas fa-door-open"></i>
-                    <span class="nav-text">Room Mgt.</span>
-                </a>
-                <ul aria-expanded="false">
-                    <li><a href="/dashboard/room">Rooms</a></li>
-                    <li><a href="/dashboard/quail">Quails</a></li>
-                </ul>
-            </li>
+{{--            <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">--}}
+{{--                    <i class="fas fa-door-open"></i>--}}
+{{--                    <span class="nav-text">Room Mgt.</span>--}}
+{{--                </a>--}}
+{{--                <ul aria-expanded="false">--}}
+{{--                    <li><a href="/dashboard/room">Rooms</a></li>--}}
+{{--                    <li><a href="/dashboard/quail">Quails</a></li>--}}
+{{--                </ul>--}}
+{{--            </li>--}}
             <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
                     <i class="fas fa-egg"></i>
                     <span class="nav-text">Eggs</span>
                 </a>
                 <ul aria-expanded="false">
-                    <li><a href="/dashboard/count-egg">Count Egg</a></li>
-                    <li><a href="/dashboard/collect-egg">Collect Egg</a></li>
+{{--                    <li><a href="/dashboard/count-egg">Count Egg</a></li>--}}
+                    <li><a href="/dashboard/collect-egg">Collected</a></li>
                 </ul>
             </li>
             <li>

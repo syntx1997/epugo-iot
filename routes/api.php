@@ -22,4 +22,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('/temperature/{temperature}/{lightStatus}', [APIController::class, 'temperature']);
 Route::get('/sound/{decibel}/{musicStatus}', [APIController::class, 'sound']);
 Route::get('/temperature/get-all', [APIController::class, 'get_all_temperature']);
+Route::get('temperature/sound/{temperature}/{lightStatus}/{decibel}/{musicStatus}', [APIController::class, 'TemperatureSound']);
 Route::get('/sound/get-all', [APIController::class, 'get_all_sound']);

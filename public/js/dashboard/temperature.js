@@ -35,3 +35,7 @@ $(function (){
     });
 
 });
+
+$(document).on('click', '#refreshTableBtn', function () {
+    reloadDataTable(temperatureTable);
+});

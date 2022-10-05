@@ -15,7 +15,6 @@ return new class extends Migration
     {
         Schema::create('eggs', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('room_id');
             $table->integer('total');
             $table->timestamps();
         });

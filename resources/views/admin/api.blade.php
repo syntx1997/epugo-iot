@@ -32,6 +32,14 @@
                         <p><strong class="text-dark">{decibel}</strong> - Decibel (e.g. 0.1)</p>
                         <p><strong class="text-dark">{music-status}</strong> - Music Status (e.g. 0 or 1). 0 means music has been turned off. 1 means light as been turned on.</p>
                     </div>
+                    <div class="form-group">
+                        <label><strong>BOTH</strong></label>
+                        <input type="text" name="sound-api" value="{{ url('/') }}/api/temperature/sound/{temperature}/{lightStatus}/{decibel}/{musicStatus}" class="form-control">
+                        <p><strong class="text-dark">{temperature}</strong> - Temperature (e.g. 36.1°C)</p>
+                        <p><strong class="text-dark">{light-status}</strong> - Light Status (e.g. 0 or 1 /). 0 means light has been turned off. 1 means light has been turned on.</p>
+                        <p><strong class="text-dark">{decibel}</strong> - Decibel (e.g. 0.1)</p>
+                        <p><strong class="text-dark">{music-status}</strong> - Music Status (e.g. 0 or 1). 0 means music has been turned off. 1 means light as been turned on.</p>
+                    </div>
                 </div>
             </div>
 

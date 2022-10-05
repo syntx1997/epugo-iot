@@ -9,6 +9,20 @@ use App\Models\Decibel;
 
 class APIController extends Controller
 {
+    public function TemperatureSound($temperature, $lightStatus, $decibel, $musicStatus) {
+        Temperature::create([
+            'temperature' => $temperature,
+            'light_status' => $lightStatus
+        ]);
+
+        Decibel::create([
+            'decibel' => $decibel,
+            'sound_status' => $musicStatus
+        ]);
+
+        return response(['message' => 'Data added successfully!']);
+    }
+
     public function temperature($temperature, $lightStatus) {
         Temperature::create([
             'temperature' => $temperature,
