@@ -37,7 +37,7 @@ class DashboardController extends Controller
 
     public function collect_egg() {
         return view('admin.collect-egg', [
-            'title' => 'Collect Egg',
+            'title' => 'Eggs Collected',
             'js' => asset('js/dashboard/collect-egg.js')
         ]);
     }

@@ -21,10 +21,8 @@
                             <thead>
                             <tr>
                                 <td class="text-center">ID#</td>
-                                <td class="text-center">Room No.</td>
-                                <td class="text-center">Total Eggs</td>
+                                <td class="text-center">Date</td>
                                 <td class="text-center">Total Collected</td>
-                                <td class="text-center">Action</td>
                             </tr>
                             </thead>
                         </table>

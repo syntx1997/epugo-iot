@@ -37,12 +37,12 @@
                     <span class="nav-text">Sound</span>
                 </a>
             </li>
-            <li>
-                <a href="/dashboard/summary" class="" aria-expanded="false">
-                    <i class="fas fa-chart-area"></i>
-                    <span class="nav-text">Summary</span>
-                </a>
-            </li>
+{{--            <li>--}}
+{{--                <a href="/dashboard/summary" class="" aria-expanded="false">--}}
+{{--                    <i class="fas fa-chart-area"></i>--}}
+{{--                    <span class="nav-text">Summary</span>--}}
+{{--                </a>--}}
+{{--            </li>--}}
             <li>
                 <a href="/dashboard/api" class="" aria-expanded="false">
                     <i class="fas fa-database"></i>

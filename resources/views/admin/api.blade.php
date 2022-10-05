@@ -32,13 +32,20 @@
                         <p><strong class="text-dark">{decibel}</strong> - Decibel (e.g. 0.1)</p>
                         <p><strong class="text-dark">{music-status}</strong> - Music Status (e.g. 0 or 1). 0 means music has been turned off. 1 means light as been turned on.</p>
                     </div>
+                    <hr>
                     <div class="form-group">
-                        <label><strong>BOTH</strong></label>
+                        <label><strong>BOTH SOUND & TEMPERATURE</strong></label>
                         <input type="text" name="sound-api" value="{{ url('/') }}/api/temperature/sound/{temperature}/{lightStatus}/{decibel}/{musicStatus}" class="form-control">
                         <p><strong class="text-dark">{temperature}</strong> - Temperature (e.g. 36.1°C)</p>
                         <p><strong class="text-dark">{light-status}</strong> - Light Status (e.g. 0 or 1 /). 0 means light has been turned off. 1 means light has been turned on.</p>
                         <p><strong class="text-dark">{decibel}</strong> - Decibel (e.g. 0.1)</p>
                         <p><strong class="text-dark">{music-status}</strong> - Music Status (e.g. 0 or 1). 0 means music has been turned off. 1 means light as been turned on.</p>
+                    </div>
+                    <hr>
+                    <div class="form-group">
+                        <label><strong>EGG</strong></label>
+                        <input type="text" name="sound-api" value="{{ url('/') }}/api/egg/add/collected/{total}" class="form-control">
+                        <p><strong class="text-dark">{total}</strong> - Total Eggs Collected</p>
                     </div>
                 </div>
             </div>

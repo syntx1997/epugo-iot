@@ -6,9 +6,18 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Models\Temperature;
 use App\Models\Decibel;
+use App\Models\Egg;
 
 class APIController extends Controller
 {
+    public function egg($total) {
+        Egg::create([
+            'total' => $total
+        ]);
+
+        return response(['message' => 'Collected egg added successfully!'], 201);
+    }
+
     public function TemperatureSound($temperature, $lightStatus, $decibel, $musicStatus) {
         Temperature::create([
             'temperature' => $temperature,
@@ -20,7 +29,7 @@ class APIController extends Controller
             'sound_status' => $musicStatus
         ]);
 
-        return response(['message' => 'Data added successfully!']);
+        return response(['message' => 'Data added successfully!'], 201);
     }
 
     public function temperature($temperature, $lightStatus) {
