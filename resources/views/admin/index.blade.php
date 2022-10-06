@@ -32,7 +32,7 @@
                                             <div>
                                                 <h4 class="fs-18 font-w600 mb-4 text-nowrap">Highest Temperature</h4>
                                                 <div class="d-flex align-items-center mb-5">
-                                                    <h2 class="fs-32 font-w700 mb-0">27°C</h2>
+                                                    <h2 class="fs-32 font-w700 mb-0">{{ $temperatureDecibelStatsData['temperature']['highest'] }}°C</h2>
                                                 </div>
                                             </div>
                                             <span class="display-4 text-danger">
@@ -47,7 +47,7 @@
                                             <div>
                                                 <h4 class="fs-18 font-w600 mb-4 text-nowrap">Lowest Temperature</h4>
                                                 <div class="d-flex align-items-center mb-5">
-                                                    <h2 class="fs-32 font-w700 mb-0">5°C</h2>
+                                                    <h2 class="fs-32 font-w700 mb-0">{{ $temperatureDecibelStatsData['temperature']['lowest'] }}°C</h2>
                                                 </div>
                                             </div>
                                             <span class="display-4 text-danger">
@@ -62,7 +62,7 @@
                                             <div>
                                                 <h4 class="fs-18 font-w600 mb-4 text-nowrap">Highest Decibel</h4>
                                                 <div class="d-flex align-items-center mb-5">
-                                                    <h2 class="fs-32 font-w700 mb-0">180db</h2>
+                                                    <h2 class="fs-32 font-w700 mb-0">{{ $temperatureDecibelStatsData['decibel']['highest'] }}db</h2>
                                                 </div>
                                             </div>
                                             <span class="display-4 text-primary">
@@ -77,7 +77,7 @@
                                             <div>
                                                 <h4 class="fs-18 font-w600 mb-4 text-nowrap">Lowest Decibel</h4>
                                                 <div class="d-flex align-items-center mb-5">
-                                                    <h2 class="fs-32 font-w700 mb-0">0db</h2>
+                                                    <h2 class="fs-32 font-w700 mb-0">{{ $temperatureDecibelStatsData['decibel']['lowest'] }}db</h2>
                                                 </div>
                                             </div>
                                             <span class="display-4 text-primary">

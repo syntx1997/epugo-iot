@@ -22,6 +22,7 @@ Route::prefix('/dashboard')->middleware('auth')->group(function () {
     Route::get('/temperature', [DashboardController::class, 'temperature']);
     Route::get('/sound', [DashboardController::class, 'sound']);
     Route::get('/summary', [DashboardController::class, 'summary']);
+    Route::get('/settings', [DashboardController::class, 'settings']);
 });
 
 Route::prefix('/func')->group(function () {
@@ -45,7 +46,6 @@ Route::prefix('/func')->group(function () {
 
     Route::prefix('/egg')->group(function () {
         Route::get('/get-all', [EggController::class, 'get_all']);
-        Route::post('/set', [EggController::class, 'set']);
     });
 
 });
