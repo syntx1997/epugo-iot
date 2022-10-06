@@ -103,13 +103,13 @@
                         <div class="card-tabs mt-3 mt-sm-0 mb-3 ">
                             <ul class="nav nav-tabs" role="tablist">
                                 <li class="nav-item">
-                                    <a class="nav-link" data-bs-toggle="tab" href="#Annual" role="tab">Annual</a>
+                                    <a class="nav-link" data-bs-toggle="tab" href="#thisYear" role="tab">This Year</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" data-bs-toggle="tab" href="#monthly" role="tab">Monthly</a>
+                                    <a class="nav-link" data-bs-toggle="tab" href="#thisMonth" role="tab">This Month</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active" data-bs-toggle="tab" href="#Weekly" role="tab">Weekly</a>
+                                    <a class="nav-link active" data-bs-toggle="tab" href="#thisWeek" role="tab">This Week</a>
                                 </li>
                             </ul>
                         </div>
@@ -125,19 +125,46 @@
                         </div>
                     </div>
                     <div class="tab-content">
-                        <div class="tab-pane fade active show" id="monthly">
-                            <div id="chartBar" class="chartBar"></div>
+                        <div class="tab-pane fade" id="thisMonth">
+                            <div id="monthChartBar" class="thisMonthChartBar"></div>
                         </div>
-                        <div class="tab-pane fade" id="Weekly">
-                            <div id="chartBar1" class="chartBar"></div>
+                        <div class="tab-pane fade active show" id="thisWeek">
+                            <div id="weekChartBar" class="thisWeekChartBar"></div>
                         </div>
-                        <div class="tab-pane fade" id="Today">
-                            <div id="chartBar2" class="chartBar"></div>
+                        <div class="tab-pane fade" id="thisYear">
+                            <div id="yearChartBar" class="thisYearChartBar"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        const thisWeek = [
+            {{ $weeklyReport['Mon'] }},
+            {{ $weeklyReport['Tue'] }},
+            {{ $weeklyReport['Wed'] }},
+            {{ $weeklyReport['Thu'] }},
+            {{ $weeklyReport['Fri'] }},
+            {{ $weeklyReport['Sat'] }},
+            {{ $weeklyReport['Sun'] }},
+        ];
+
+        const thisYear = [
+            {{ $annualReport['Jan'] }},
+            {{ $annualReport['Feb'] }},
+            {{ $annualReport['Mar'] }},
+            {{ $annualReport['Apr'] }},
+            {{ $annualReport['May'] }},
+            {{ $annualReport['Jun'] }},
+            {{ $annualReport['Jul'] }},
+            {{ $annualReport['Aug'] }},
+            {{ $annualReport['Sep'] }},
+            {{ $annualReport['Oct'] }},
+            {{ $annualReport['Nov'] }},
+            {{ $annualReport['Dec'] }},
+        ];
+    </script>
 
 @endsection

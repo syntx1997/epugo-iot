@@ -2,9 +2,9 @@
 
 (function($) {
     /* "use strict" */
-	
+
  var dlabChartlist = function(){
-	
+
 	var screenWidth = $(window).width();
 	let draw = Chart.controllers.line.__super__.draw; //draw shadow
 		var donutChart1 = function(){
@@ -13,29 +13,24 @@
 			height: "70"
 		});
 	}
-	var chartBar = function(){
-		
+	var thisWeekChartBar = function(){
+
 		var options = {
 			  series: [
 				{
-					name: 'Running',
-					data: [50, 18, 70, 40, 90, 70, 20],
-					//radius: 12,	
-				}, 
-				{
-				  name: 'Cycling',
-				  data: [80, 40, 55, 20, 45, 30, 80]
-				}, 
-				
+				  name: 'Collected',
+				  data: thisWeek
+				},
+
 			],
 				chart: {
 				type: 'bar',
 				height: 400,
-				
+
 				toolbar: {
 					show: false,
 				},
-				
+
 			},
 			plotOptions: {
 			  bar: {
@@ -44,7 +39,7 @@
 				endingShape: "rounded",
 				borderRadius: 12,
 			  },
-			  
+
 			},
 			states: {
 			  hover: {
@@ -58,14 +53,14 @@
 			markers: {
 		shape: "circle",
 		},
-		
-		
+
+
 			legend: {
 				show: false,
 				fontSize: '12px',
 				labels: {
 					colors: '#000000',
-					
+
 					},
 				markers: {
 				width: 18,
@@ -73,7 +68,7 @@
 				strokeWidth: 10,
 				strokeColor: '#fff',
 				fillColors: undefined,
-				radius: 12,	
+				radius: 12,
 				}
 			},
 			stroke: {
@@ -127,42 +122,37 @@
 					stops: [0, 50, 50],
 					colorStops: []
 				}
-			}, 
+			},
 			tooltip: {
 			  y: {
 				formatter: function (val) {
-				  return "$ " + val + " thousands"
+				  return val + " eggs"
 				}
 			  }
 			},
 			};
 
-			var chartBar1 = new ApexCharts(document.querySelector("#chartBar"), options);
-			chartBar1.render();
+			var weekChartBar = new ApexCharts(document.querySelector("#weekChartBar"), options);
+			weekChartBar.render();
 	}
-	var chartBar1 = function(){
-		
+	var thisYearBarChart = function(){
+
 		var options = {
 			  series: [
 				{
-					name: 'Running',
-					data: [50, 18, 70, 40, 90, 70, 20],
-					//radius: 12,	
-				}, 
-				{
-				  name: 'Cycling',
-				  data: [80, 40, 55, 20, 45, 30, 80]
-				}, 
-				
+				  name: 'Collected',
+				  data: thisYear
+				},
+
 			],
 				chart: {
 				type: 'bar',
 				height: 370,
-				
+
 				toolbar: {
 					show: false,
 				},
-				
+
 			},
 			plotOptions: {
 			  bar: {
@@ -171,7 +161,7 @@
 				endingShape: "rounded",
 				borderRadius: 12,
 			  },
-			  
+
 			},
 			states: {
 			  hover: {
@@ -185,14 +175,14 @@
 			markers: {
 		shape: "circle",
 		},
-		
-		
+
+
 			legend: {
 				show: false,
 				fontSize: '12px',
 				labels: {
 					colors: '#000000',
-					
+
 					},
 				markers: {
 				width: 18,
@@ -200,7 +190,7 @@
 				strokeWidth: 10,
 				strokeColor: '#fff',
 				fillColors: undefined,
-				radius: 12,	
+				radius: 12,
 				}
 			},
 			stroke: {
@@ -215,7 +205,7 @@
 			},
 			xaxis: {
 				 position: 'bottom',
-			  categories: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+			  categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
 			  labels: {
 			   style: {
 				  colors: '#787878',
@@ -254,42 +244,42 @@
 					stops: [0, 50, 50],
 					colorStops: []
 				}
-			}, 
+			},
 			tooltip: {
 			  y: {
 				formatter: function (val) {
-				  return "$ " + val + " thousands"
+				  return val + " eggs"
 				}
 			  }
 			},
 			};
 
-			var chartBar1 = new ApexCharts(document.querySelector("#chartBar1"), options);
-			chartBar1.render();
+			var yearBarChart = new ApexCharts(document.querySelector("#yearChartBar"), options);
+			yearBarChart.render();
 	}
 	var chartBar2 = function(){
-		
+
 		var options = {
 			  series: [
 				{
 					name: 'Running',
 					data: [50, 18, 70, 40, 90, 70, 20],
-					//radius: 12,	
-				}, 
+					//radius: 12,
+				},
 				{
 				  name: 'Cycling',
 				  data: [80, 40, 55, 20, 45, 30, 80]
-				}, 
-				
+				},
+
 			],
 				chart: {
 				type: 'bar',
 				height: 370,
-				
+
 				toolbar: {
 					show: false,
 				},
-				
+
 			},
 			plotOptions: {
 			  bar: {
@@ -298,7 +288,7 @@
 				endingShape: "rounded",
 				borderRadius: 12,
 			  },
-			  
+
 			},
 			states: {
 			  hover: {
@@ -312,14 +302,14 @@
 			markers: {
 		shape: "circle",
 		},
-		
-		
+
+
 			legend: {
 				show: false,
 				fontSize: '12px',
 				labels: {
 					colors: '#000000',
-					
+
 					},
 				markers: {
 				width: 18,
@@ -327,7 +317,7 @@
 				strokeWidth: 10,
 				strokeColor: '#fff',
 				fillColors: undefined,
-				radius: 12,	
+				radius: 12,
 				}
 			},
 			stroke: {
@@ -381,7 +371,7 @@
 					stops: [0, 50, 50],
 					colorStops: []
 				}
-			}, 
+			},
 			tooltip: {
 			  y: {
 				formatter: function (val) {
@@ -400,8 +390,8 @@
 				{
 					name: 'Net Profit',
 					data: [20, 40, 20, 30, 50, 40, 60,],
-					//radius: 12,	
-				}, 				
+					//radius: 12,
+				},
 			],
 				chart: {
 				type: 'line',
@@ -409,7 +399,7 @@
 				toolbar: {
 					show: false,
 				},
-				
+
 			},
 			plotOptions: {
 			  bar: {
@@ -425,7 +415,7 @@
 			markers: {
 				shape: "circle",
 			},
-	
+
 			legend: {
 				show: false,
 			},
@@ -435,7 +425,7 @@
 			  curve:'smooth',
 			  colors:['var(--primary)'],
 			},
-			
+
 			grid: {
 				borderColor: '#eee',
 				show: true,
@@ -443,15 +433,15 @@
 					lines: {
 						show: true,
 					}
-				},  
+				},
 				 yaxis: {
 					lines: {
 						show: false,
 					}
-				},  
+				},
 			},
 			xaxis: {
-				
+
 			  categories: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
 			  labels: {
 				style: {
@@ -467,7 +457,7 @@
 			  }
 			},
 			yaxis: {
-			show:true,	
+			show:true,
 			labels: {
 				offsetX: -15,
 			   style: {
@@ -475,7 +465,7 @@
 				  fontSize: '14px',
 				   fontFamily: 'Poppins',
 				  fontWeight: 100,
-				  
+
 				},
 				 formatter: function (y) {
 						  return y.toFixed(0) + "k";
@@ -497,8 +487,8 @@
 
 			var chartBar1 = new ApexCharts(document.querySelector("#revenueMap"), options);
 			chartBar1.render();
-		 
-		 
+
+
 	 }
 	 var columnChart = function(){
 		var options = {
@@ -534,7 +524,7 @@
 				bar: {
 					horizontal: false,
 					columnWidth: '20%',
-					
+
 					endingShape: "rounded",
 					startingShape: "rounded",
 					backgroundRadius: 20,
@@ -544,7 +534,7 @@
 						backgroundBarRadius: 10,
 					},
 				},
-				
+
 			},
 			colors:['#ECECEC', '#886CC0', '#886CC0'],
 			xaxis: {
@@ -565,11 +555,11 @@
 						cssClass: 'apexcharts-xaxis-label',
 					},
 				},
-				
+
 				crosshairs: {
 					show: false,
 				},
-				
+
 				categories: ['Sun', 'Mon', 'Tue'],
 			},
 			yaxis: {
@@ -595,7 +585,7 @@
 		var chart = new ApexCharts(document.querySelector("#columnChart"), options);
 		chart.render();
 	}
-	
+
 	var NewCustomers = function(){
 		var options = {
 		  series: [
@@ -603,7 +593,7 @@
 				name: 'Net Profit',
 				data: [100,300, 100, 400, 200, 400],
 				/* radius: 30,	 */
-			}, 				
+			},
 		],
 			chart: {
 			type: 'line',
@@ -618,9 +608,9 @@
 			sparkline: {
 				enabled: true
 			}
-			
+
 		},
-		
+
 		colors:['var(--primary)'],
 		dataLabels: {
 		  enabled: false,
@@ -635,7 +625,7 @@
 		  curve:'smooth',
 		  colors:['var(--primary)'],
 		},
-		
+
 		grid: {
 			show:false,
 			borderColor: '#eee',
@@ -721,7 +711,7 @@
 
 		var chartBar1 = new ApexCharts(document.querySelector("#NewCustomers"), options);
 		chartBar1.render();
-	 
+
 	}
 	var NewCustomers1 = function(){
 		var options = {
@@ -730,7 +720,7 @@
 				name: 'Net Profit',
 				data: [100,300, 200, 400, 100, 400],
 				/* radius: 30,	 */
-			}, 				
+			},
 		],
 			chart: {
 			type: 'line',
@@ -745,9 +735,9 @@
 			sparkline: {
 				enabled: true
 			}
-			
+
 		},
-		
+
 		colors:['#0E8A74'],
 		dataLabels: {
 		  enabled: false,
@@ -762,7 +752,7 @@
 		  curve:'smooth',
 		  colors:['var(--primary)'],
 		},
-		
+
 		grid: {
 			show:false,
 			borderColor: '#eee',
@@ -848,9 +838,9 @@
 
 		var chartBar1 = new ApexCharts(document.querySelector("#NewCustomers1"), options);
 		chartBar1.render();
-	 
+
 	}
-	
+
 	var redial = function(){
 		  var options = {
           series: [70],
@@ -871,7 +861,7 @@
               strokeWidth: '100%',
               margin: 5,
             },
-			
+
 			hollow: {
               margin: 30,
               size: '45%',
@@ -881,7 +871,7 @@
               imageOffsetY: 0,
               position: 'front',
             },
-			
+
             dataLabels: {
               name: {
                 show: false
@@ -903,7 +893,7 @@
 			},
           }
         }
-		
+
 		],
         grid: {
           padding: {
@@ -931,8 +921,8 @@
 
         var chart = new ApexCharts(document.querySelector("#redial"), options);
         chart.render();
-	
-	
+
+
 	}
 	var emailchart = function(){
 		 var options = {
@@ -973,30 +963,30 @@
 
         var chart = new ApexCharts(document.querySelector("#emailchart"), options);
         chart.render();
-    
+
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
- 
+
+
+
+
+
+
+
+
+
+
+
+
 	/* Function ============ */
 		return {
 			init:function(){
 			},
-			
-			
+
+
 			load:function(){
-			donutChart1();	
-			chartBar();
-			chartBar1();
+			donutChart1();
+			thisWeekChartBar();
+			thisYearBarChart();
 			chartBar2();
 			revenueMap();
 			columnChart();
@@ -1004,24 +994,24 @@
 			NewCustomers1();
 			redial();
 			emailchart();
-				
+
 			},
-			
+
 			resize:function(){
 			}
 		}
-	
+
 	}();
 
-	
-		
+
+
 	jQuery(window).on('load',function(){
 		setTimeout(function(){
 			dlabChartlist.load();
-		}, 1000); 
-		
+		}, 1000);
+
 	});
 
-     
+
 
 })(jQuery);
