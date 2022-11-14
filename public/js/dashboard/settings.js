@@ -1,6 +1,9 @@
 const settingsForm = $('#settingsForm');
 const settingsFormSubmitBtn = settingsForm.find('button[type="submit"]');
 
+const passwordForm = $('#passwordForm');
+const passwordFormSubmitBtn = passwordForm.find('button[type="submit"]');
+
 $(function () {
    settingsForm.find('#uploadPhotoBtn').on('click', function () {
        settingsForm.find('input[name="avatar"]').click();
@@ -45,10 +48,44 @@ $(function () {
                 }
            },
            beforeSend: function () {
+               removeInputValidationErrors();
                submitBtnBeforeSend(settingsFormSubmitBtn, 'Updating');
            },
            complete: function () {
                 submitBtnAfterSend(settingsFormSubmitBtn, 'Update Information');
+           }
+       });
+   });
+
+   passwordForm.on('submit', function (e) {
+       e.preventDefault();
+       $.ajax({
+           url: '/func/setting/update-password',
+           type: 'POST',
+           data: $(this).serialize(),
+           dataType: 'JSON',
+           success: function (res) {
+
+           },
+           error: function (err) {
+               const errJSON = err.responseJSON;
+
+               if (errJSON.errors) {
+                   const errors = errJSON.errors;
+                   const Validation = new RegistrationValidation();
+
+                   $.each(errors, function (field, errMsg) {
+                       const input = formInput(passwordForm, 'input', field);
+                       Validation.validate(input, errMsg);
+                   });
+               }
+           },
+           beforeSend: function () {
+               removeInputValidationErrors();
+               submitBtnBeforeSend(passwordFormSubmitBtn, 'Updating');
+           },
+           complete: function () {
+               submitBtnAfterSend(passwordFormSubmitBtn, 'Update Password');
            }
        });
    });

@@ -51,6 +51,7 @@ Route::prefix('/func')->group(function () {
 
     Route::prefix('/setting')->group(function () {
         Route::post('/update-information', [SettingController::class, 'updateInformation']);
+        Route::post('/update-password', [SettingController::class, 'updatePassword']);
     });
 
 });

@@ -58,22 +58,23 @@
                 <div class="form-group row mb-2">
                     <label class="col-3">Current Password</label>
                     <div class="col-9">
-                        <input type="text" name="currentPassword" class="form-control">
+                        <input type="password" name="currentPassword" class="form-control">
                     </div>
                 </div>
                 <div class="form-group row mb-2">
                     <label class="col-3">New Password</label>
                     <div class="col-9">
-                        <input type="text" name="newPassword" class="form-control">
+                        <input type="password" name="newPassword" class="form-control">
                     </div>
                 </div>
                 <div class="form-group row mb-2">
                     <label class="col-3">Re-Type Password</label>
                     <div class="col-9">
-                        <input type="text" name="reTypePassword" class="form-control">
+                        <input type="password" name="reTypePassword" class="form-control">
                     </div>
                 </div>
                 <div class="form-group">
+                    <input type="hidden" name="id" value="{{ auth()->user()->id }}">
                     <button type="submit" class="btn btn-primary">Update Password</button>
                 </div>
             </form>
