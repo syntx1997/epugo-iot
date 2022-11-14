@@ -7,6 +7,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\RoomController;
 use App\Http\Controllers\QuailController;
 use App\Http\Controllers\EggController;
+use App\Http\Controllers\SettingController;
 
 Route::get('/', [DashboardController::class, 'index'])
     ->middleware('auth');
@@ -46,6 +47,10 @@ Route::prefix('/func')->group(function () {
 
     Route::prefix('/egg')->group(function () {
         Route::get('/get-all', [EggController::class, 'get_all']);
+    });
+
+    Route::prefix('/setting')->group(function () {
+        Route::post('/update-information', [SettingController::class, 'updateInformation']);
     });
 
 });
