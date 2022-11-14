@@ -48,8 +48,9 @@ class SettingController extends Controller
             return response(['errors' => $validator->errors()], 401);
         }
 
-        $user = User::where('id', $request->id)->first();
-        if(!Hash::check($request->currentPassword, $user->password)) {
+        $account = User::where('id', $request->id)->first();
+
+        if(!Hash::check($request->currentPassword, $account->password)) {
             return response([
                 'errors' => [
                     'currentPassword' => 'Incorrect Password!'
@@ -57,7 +58,7 @@ class SettingController extends Controller
             ], 401);
         }
 
-        if ($request->newPassword == $request->reTypePassword) {
+        if ($request->newPassword !== $request->reTypePassword) {
             return response([
                 'errors' => [
                     'newPassword' => 'Password did\'nt matched!',
@@ -66,8 +67,9 @@ class SettingController extends Controller
             ], 401);
         }
 
+        $user = User::find($request->id);
         $user->update(['password' => bcrypt($request->newPassword)]);
 
-        return response(['message' => 'Password successfully updated!'], 201);
+        return response(['message' => 'Password successfully updated!']);
     }
 }

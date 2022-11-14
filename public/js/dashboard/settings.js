@@ -65,7 +65,8 @@ $(function () {
            data: $(this).serialize(),
            dataType: 'JSON',
            success: function (res) {
-
+                Swal.fire('Success', res.message, 'success');
+                resetForm(passwordForm);
            },
            error: function (err) {
                const errJSON = err.responseJSON;
