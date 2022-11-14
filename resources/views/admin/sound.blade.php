@@ -17,7 +17,7 @@
                 </div>
                 <div class="card-body">
 
-                    <div class="table-responsive">
+                    <div class="table-responsive1">
                         <table id="sound-table" class="display" style="width: 100%">
                             <thead>
                             <tr>

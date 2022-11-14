@@ -20,7 +20,7 @@ $(function () {
                 'data': 'total'
             }
         ],
-        searching: false,
+        searching: true,
         paging:true,
         select: false,
         info: true,
@@ -30,6 +30,10 @@ $(function () {
                 next: '<i class="fa fa-angle-double-right" aria-hidden="true"></i>',
                 previous: '<i class="fa fa-angle-double-left" aria-hidden="true"></i>'
             }
-        }
+        },
+        dom: 'Bfrtip',
+        buttons: [
+            'copy', 'csv', 'excel', 'pdf', 'print'
+        ],
     });
 });

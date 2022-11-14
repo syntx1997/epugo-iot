@@ -16,7 +16,7 @@
                     <h4 class="card-title">{{ $title }}</h4>
                 </div>
                 <div class="card-body">
-                    <div class="table-responsive">
+                    <div class="table-responsive1">
                         <table id="egg-table" class="display" style="width: 100%">
                             <thead>
                             <tr>

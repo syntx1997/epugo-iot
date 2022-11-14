@@ -119,7 +119,7 @@
                     <div class="d-flex justify-content-between align-items-center flex-wrap">
                         <div class="d-flex">
                             <div class="ms-3">
-                                <h4 class="fs-24 font-w700 ">0</h4>
+                                <h4 class="fs-24 font-w700 ">{{ \App\Models\Egg::sum('total') }}</h4>
                                 <span class="fs-16 font-w400 d-block">Total Eggs</span>
                             </div>
                         </div>
