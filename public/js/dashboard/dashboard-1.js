@@ -83,7 +83,7 @@
 			},
 			xaxis: {
 				 position: 'bottom',
-			  categories: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+			  categories: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
 			  labels: {
 			   style: {
 				  colors: '#787878',
@@ -332,7 +332,7 @@
 			},
 			xaxis: {
 				 position: 'bottom',
-			  categories: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+			  categories: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
 			  labels: {
 			   style: {
 				  colors: '#787878',
