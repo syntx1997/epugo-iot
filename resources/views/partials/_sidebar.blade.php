@@ -44,6 +44,12 @@
 {{--                </a>--}}
 {{--            </li>--}}
             <li>
+                <a href="/dashboard/history" class="" aria-expanded="false">
+                    <i class="fas fa-history"></i>
+                    <span class="nav-text">History</span>
+                </a>
+            </li>
+            <li>
                 <a href="/dashboard/api" class="" aria-expanded="false">
                     <i class="fas fa-database"></i>
                     <span class="nav-text">API</span>

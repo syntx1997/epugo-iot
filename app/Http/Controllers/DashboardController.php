@@ -78,6 +78,13 @@ class DashboardController extends Controller
         ]);
     }
 
+    public function history() {
+        return view('admin.history', [
+            'title' => 'History',
+            'js' => asset('js/dashboard/history.js')
+        ]);
+    }
+
     public function settings() {
         return view('admin.settings', [
             'title' => 'Settings',

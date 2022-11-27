@@ -8,6 +8,7 @@ use App\Http\Controllers\RoomController;
 use App\Http\Controllers\QuailController;
 use App\Http\Controllers\EggController;
 use App\Http\Controllers\SettingController;
+use App\Http\Controllers\HistoryController;
 
 Route::get('/', [DashboardController::class, 'index'])
     ->middleware('auth');
@@ -24,6 +25,7 @@ Route::prefix('/dashboard')->middleware('auth')->group(function () {
     Route::get('/sound', [DashboardController::class, 'sound']);
     Route::get('/summary', [DashboardController::class, 'summary']);
     Route::get('/settings', [DashboardController::class, 'settings']);
+    Route::get('/history', [DashboardController::class, 'history']);
 });
 
 Route::prefix('/func')->group(function () {
@@ -52,6 +54,10 @@ Route::prefix('/func')->group(function () {
     Route::prefix('/setting')->group(function () {
         Route::post('/update-information', [SettingController::class, 'updateInformation']);
         Route::post('/update-password', [SettingController::class, 'updatePassword']);
+    });
+
+    Route::prefix('/history')->group(function () {
+        Route::get('/get-all', [HistoryController::class, 'getAll']);
     });
 
 });
