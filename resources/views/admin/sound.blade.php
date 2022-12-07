@@ -22,8 +22,8 @@
                             <thead>
                             <tr>
                                 <td class="text-center">Date & Time</td>
-                                <td class="text-center">Temperature</td>
-                                <td class="text-center">Sound/Music Status</td>
+                                <td class="text-center">Decibel</td>
+{{--                                <td class="text-center">Sound/Music Status</td>--}}
                             </tr>
                             </thead>
                         </table>

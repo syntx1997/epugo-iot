@@ -10,7 +10,7 @@
                             <div class="card tryal-gradient">
                                 <div class="card-body tryal row">
                                     <div class="col-xl-7 col-sm-6">
-                                        <h2>E-PUGO: IoT-Based Quail Management Software</h2>
+                                        <h2>ePugo: An IoT-Based Quail Poultry Management System</h2>
                                         <span>Manage your Quail Farm Seamlesly</span>
 {{--                                            <a href="javascript:void(0);" class="btn btn-rounded  fs-18 font-w500">Try Free Now</a>--}}
                                     </div>

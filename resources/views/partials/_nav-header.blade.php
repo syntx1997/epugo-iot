@@ -3,7 +3,7 @@
         <img src="{{ asset('images/quail.png') }}" style="width: 50px">
         <div class="brand-title">
             <h2 class="">E-PUGO</h2>
-            <span class="brand-sub-title">Quail Farm Mgt. System</span>
+            <span class="brand-sub-title">Quail Poultry Mgt. System</span>
         </div>
     </a>
     <div class="nav-control">

@@ -14,11 +14,6 @@ $(function (){
                 'className': 'text-center',
                 'orderable': false,
                 'data': 'decibel'
-            },
-            {
-                'className': 'text-center',
-                'orderable': false,
-                'data': 'status'
             }
         ],
         searching: true,
