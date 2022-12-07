@@ -13,128 +13,250 @@
 			height: "70"
 		});
 	}
-	var thisWeekChartBar = function(){
+     var thisMonthChartBar = function(){
 
-		var options = {
-			  series: [
-				{
-				  name: 'Collected',
-				  data: thisWeek
-				},
+         var options = {
+             series: [
+                 {
+                     name: 'Collected',
+                     data: thisMonth
+                 },
 
-			],
-				chart: {
-				type: 'bar',
-				height: 400,
+             ],
+             chart: {
+                 type: 'bar',
+                 height: 400,
 
-				toolbar: {
-					show: false,
-				},
+                 toolbar: {
+                     show: false,
+                 },
 
-			},
-			plotOptions: {
-			  bar: {
-				horizontal: false,
-				columnWidth: '57%',
-				endingShape: "rounded",
-				borderRadius: 12,
-			  },
+             },
+             plotOptions: {
+                 bar: {
+                     horizontal: false,
+                     columnWidth: '57%',
+                     endingShape: "rounded",
+                     borderRadius: 12,
+                 },
 
-			},
-			states: {
-			  hover: {
-				filter: 'none',
-			  }
-			},
-			colors:['#FFA26D', '#FF5ED2'],
-			dataLabels: {
-			  enabled: false,
-			},
-			markers: {
-		shape: "circle",
-		},
+             },
+             states: {
+                 hover: {
+                     filter: 'none',
+                 }
+             },
+             colors:['#FFA26D', '#FF5ED2'],
+             dataLabels: {
+                 enabled: false,
+             },
+             markers: {
+                 shape: "circle",
+             },
 
 
-			legend: {
-				show: false,
-				fontSize: '12px',
-				labels: {
-					colors: '#000000',
+             legend: {
+                 show: false,
+                 fontSize: '12px',
+                 labels: {
+                     colors: '#000000',
 
-					},
-				markers: {
-				width: 18,
-				height: 18,
-				strokeWidth: 10,
-				strokeColor: '#fff',
-				fillColors: undefined,
-				radius: 12,
-				}
-			},
-			stroke: {
-			  show: true,
-			  width: 4,
-			  curve: 'smooth',
-			  lineCap: 'round',
-			  colors: ['transparent']
-			},
-			grid: {
-				borderColor: '#eee',
-			},
-			xaxis: {
-				 position: 'bottom',
-			  categories: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-			  labels: {
-			   style: {
-				  colors: '#787878',
-				  fontSize: '13px',
-				  fontFamily: 'poppins',
-				  fontWeight: 100,
-				  cssClass: 'apexcharts-xaxis-label',
-				},
-			  },
-			  crosshairs: {
-			  show: false,
-			  }
-			},
-			yaxis: {
-				labels: {
-					offsetX:-16,
-				   style: {
-					  colors: '#787878',
-					  fontSize: '13px',
-					   fontFamily: 'poppins',
-					  fontWeight: 100,
-					  cssClass: 'apexcharts-xaxis-label',
-				  },
-			  },
-			},
-			fill: {
-				type: 'gradient',
-				gradient: {
-					shade: 'white',
-					type: "vertical",
-					shadeIntensity: 0.2,
-					gradientToColors: undefined, // optional, if not defined - uses the shades of same color in series
-					inverseColors: true,
-					opacityFrom: 1,
-					opacityTo: 1,
-					stops: [0, 50, 50],
-					colorStops: []
-				}
-			},
-			tooltip: {
-			  y: {
-				formatter: function (val) {
-				  return val + " eggs"
-				}
-			  }
-			},
-			};
+                 },
+                 markers: {
+                     width: 18,
+                     height: 18,
+                     strokeWidth: 10,
+                     strokeColor: '#fff',
+                     fillColors: undefined,
+                     radius: 12,
+                 }
+             },
+             stroke: {
+                 show: true,
+                 width: 4,
+                 curve: 'smooth',
+                 lineCap: 'round',
+                 colors: ['transparent']
+             },
+             grid: {
+                 borderColor: '#eee',
+             },
+             xaxis: {
+                 position: 'bottom',
+                 categories: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31'],
+                 labels: {
+                     style: {
+                         colors: '#787878',
+                         fontSize: '13px',
+                         fontFamily: 'poppins',
+                         fontWeight: 100,
+                         cssClass: 'apexcharts-xaxis-label',
+                     },
+                 },
+                 crosshairs: {
+                     show: false,
+                 }
+             },
+             yaxis: {
+                 labels: {
+                     offsetX:-16,
+                     style: {
+                         colors: '#787878',
+                         fontSize: '13px',
+                         fontFamily: 'poppins',
+                         fontWeight: 100,
+                         cssClass: 'apexcharts-xaxis-label',
+                     },
+                 },
+             },
+             fill: {
+                 type: 'gradient',
+                 gradient: {
+                     shade: 'white',
+                     type: "vertical",
+                     shadeIntensity: 0.2,
+                     gradientToColors: undefined, // optional, if not defined - uses the shades of same color in series
+                     inverseColors: true,
+                     opacityFrom: 1,
+                     opacityTo: 1,
+                     stops: [0, 50, 50],
+                     colorStops: []
+                 }
+             },
+             tooltip: {
+                 y: {
+                     formatter: function (val) {
+                         return val + " eggs"
+                     }
+                 }
+             },
+         };
 
-			var weekChartBar = new ApexCharts(document.querySelector("#weekChartBar"), options);
-			weekChartBar.render();
-	}
+         var monthChartBar = new ApexCharts(document.querySelector("#monthChartBar"), options);
+         monthChartBar.render();
+     }
+     var thisWeekChartBar = function(){
+
+         var options = {
+             series: [
+                 {
+                     name: 'Collected',
+                     data: thisWeek
+                 },
+
+             ],
+             chart: {
+                 type: 'bar',
+                 height: 400,
+
+                 toolbar: {
+                     show: false,
+                 },
+
+             },
+             plotOptions: {
+                 bar: {
+                     horizontal: false,
+                     columnWidth: '57%',
+                     endingShape: "rounded",
+                     borderRadius: 12,
+                 },
+
+             },
+             states: {
+                 hover: {
+                     filter: 'none',
+                 }
+             },
+             colors:['#FFA26D', '#FF5ED2'],
+             dataLabels: {
+                 enabled: false,
+             },
+             markers: {
+                 shape: "circle",
+             },
+
+
+             legend: {
+                 show: false,
+                 fontSize: '12px',
+                 labels: {
+                     colors: '#000000',
+
+                 },
+                 markers: {
+                     width: 18,
+                     height: 18,
+                     strokeWidth: 10,
+                     strokeColor: '#fff',
+                     fillColors: undefined,
+                     radius: 12,
+                 }
+             },
+             stroke: {
+                 show: true,
+                 width: 4,
+                 curve: 'smooth',
+                 lineCap: 'round',
+                 colors: ['transparent']
+             },
+             grid: {
+                 borderColor: '#eee',
+             },
+             xaxis: {
+                 position: 'bottom',
+                 categories: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+                 labels: {
+                     style: {
+                         colors: '#787878',
+                         fontSize: '13px',
+                         fontFamily: 'poppins',
+                         fontWeight: 100,
+                         cssClass: 'apexcharts-xaxis-label',
+                     },
+                 },
+                 crosshairs: {
+                     show: false,
+                 }
+             },
+             yaxis: {
+                 labels: {
+                     offsetX:-16,
+                     style: {
+                         colors: '#787878',
+                         fontSize: '13px',
+                         fontFamily: 'poppins',
+                         fontWeight: 100,
+                         cssClass: 'apexcharts-xaxis-label',
+                     },
+                 },
+             },
+             fill: {
+                 type: 'gradient',
+                 gradient: {
+                     shade: 'white',
+                     type: "vertical",
+                     shadeIntensity: 0.2,
+                     gradientToColors: undefined, // optional, if not defined - uses the shades of same color in series
+                     inverseColors: true,
+                     opacityFrom: 1,
+                     opacityTo: 1,
+                     stops: [0, 50, 50],
+                     colorStops: []
+                 }
+             },
+             tooltip: {
+                 y: {
+                     formatter: function (val) {
+                         return val + " eggs"
+                     }
+                 }
+             },
+         };
+
+         var weekChartBar = new ApexCharts(document.querySelector("#weekChartBar"), options);
+         weekChartBar.render();
+     }
 	var thisYearBarChart = function(){
 
 		var options = {
@@ -985,6 +1107,7 @@
 
 			load:function(){
 			donutChart1();
+            thisMonthChartBar();
 			thisWeekChartBar();
 			thisYearBarChart();
 			chartBar2();

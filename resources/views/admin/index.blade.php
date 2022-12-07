@@ -165,6 +165,40 @@
             {{ $annualReport['Nov'] }},
             {{ $annualReport['Dec'] }},
         ];
+
+        const thisMonth = [
+            {{ $monthlyReport[1] }},
+            {{ $monthlyReport[2] }},
+            {{ $monthlyReport[3] }},
+            {{ $monthlyReport[4] }},
+            {{ $monthlyReport[5] }},
+            {{ $monthlyReport[6] }},
+            {{ $monthlyReport[7] }},
+            {{ $monthlyReport[8] }},
+            {{ $monthlyReport[9] }},
+            {{ $monthlyReport[10] }},
+            {{ $monthlyReport[11] }},
+            {{ $monthlyReport[12] }},
+            {{ $monthlyReport[13] }},
+            {{ $monthlyReport[14] }},
+            {{ $monthlyReport[15] }},
+            {{ $monthlyReport[16] }},
+            {{ $monthlyReport[17] }},
+            {{ $monthlyReport[18] }},
+            {{ $monthlyReport[19] }},
+            {{ $monthlyReport[20] }},
+            {{ $monthlyReport[21] }},
+            {{ $monthlyReport[22] }},
+            {{ $monthlyReport[23] }},
+            {{ $monthlyReport[24] }},
+            {{ $monthlyReport[25] }},
+            {{ $monthlyReport[26] }},
+            {{ $monthlyReport[27] }},
+            {{ $monthlyReport[28] }},
+            {{ $monthlyReport[29] ?? 0 }},
+            {{ $monthlyReport[30] ?? 0 }},
+            {{ $monthlyReport[31] ?? 0 }},
+        ];
     </script>
 
 @endsection
